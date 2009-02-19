@@ -1,0 +1,16 @@
+DISPATCH
+
+An SMTP server in Java.
+
+    Issues and Tasks: http://blogometer.com/trac/incubator
+    Source: http://github.com/bigeasy/dispatch/tree/master
+    Contact: alan@blogometer.com
+
+PURPOSE
+
+Dispatch is a SMTP server that pipes its messages through Java mail filters. It
+is a framework for creating mail applications in Java.
+
+MOTIVATION
+
+Could not find a lightweight Java implementation of the mail protocols.
