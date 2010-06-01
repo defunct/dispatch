@@ -5,7 +5,7 @@
   <classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="var" path="M2_REPO/org/testng/testng/5.10/testng-5.10-jdk15.jar" sourcepath="M2_REPO/org/testng/testng/5.10/testng-5.10-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/testng/testng-jdk15/5.10/testng-jdk15-5.10.jar" sourcepath="M2_REPO/org/testng/testng-jdk15/5.10/testng-jdk15-5.10-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/mockito/mockito-core/1.6/mockito-core-1.6.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/goodworkalan/manifold/0.1/manifold-0.1.jar" sourcepath="M2_REPO/com/goodworkalan/manifold/0.1/manifold-0.1-sources.jar">
     <attributes>
