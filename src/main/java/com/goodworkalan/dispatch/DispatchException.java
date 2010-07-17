@@ -6,8 +6,7 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 public class DispatchException
-extends RuntimeException
-{
+extends RuntimeException {
     /** The serial version id. */
     private static final long serialVersionUID = 20070821L;
     
@@ -23,8 +22,7 @@ extends RuntimeException
      * @param code
      *            The error code.
      */
-    public DispatchException(int code)
-    {
+    public DispatchException(int code) {
         this.code = code;
     }
 
@@ -37,8 +35,7 @@ extends RuntimeException
      * @param cause
      *            The cause exception.
      */
-    public DispatchException(int code, Throwable cause)
-    {
+    public DispatchException(int code, Throwable cause) {
         super(cause);
         this.code = code;
     }
@@ -48,8 +45,7 @@ extends RuntimeException
      * 
      * @return The error code.
      */
-    public int getCode()
-    {
+    public int getCode() {
         return code;
     }
 
@@ -61,8 +57,7 @@ extends RuntimeException
      *            The format argument.
      * @return This sheaf exception for chained invocation of add.
      */
-    public DispatchException add(Object argument)
-    {
+    public DispatchException add(Object argument) {
         arguments.add(argument);
         return this;
     }
@@ -74,25 +69,18 @@ extends RuntimeException
      * @return The exception message.
      */
     @Override
-    public String getMessage()
-    {
+    public String getMessage() {
         String key = Integer.toString(code);
         ResourceBundle exceptions = ResourceBundle.getBundle("com.goodworkalan.dispatch.exceptions");
         String format;
-        try
-        {
+        try {
             format = exceptions.getString(key);
-        }
-        catch (MissingResourceException e)
-        {
+        } catch (MissingResourceException e) {
             return key;
         }
-        try
-        {
+        try {
             return String.format(format, arguments.toArray());
-        }
-        catch (Throwable e)
-        {
+        } catch (Throwable e) {
             throw new Error(key, e);
         }
     }
